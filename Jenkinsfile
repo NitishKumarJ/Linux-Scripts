@@ -2,21 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout Code') {
             steps {
-                echo 'Building the application...'
+                git 'https://github.com/NitishKumarJ/Linux-Scripts.git'
             }
         }
 
-        stage('Test') {
+        stage('Run Log Cleaner Script') {
             steps {
-                echo 'Running unit tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying to server...'
+                sh 'chmod +x logs_clear.sh'
+                sh './logs_clear.sh'
             }
         }
     }
