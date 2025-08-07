@@ -9,5 +9,5 @@ free -m
 echo ""
 echo "disk usage"
 df -h
-~
+
 
