@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Log Cleaner Script') {
             steps {
-                sh 'chmod +x logs_clear.sh'
+                sh 'chmod +x healt_checker.sh'
                 sh './healt_checker.sh'
             }
         }
