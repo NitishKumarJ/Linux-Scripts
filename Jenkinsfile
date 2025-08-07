@@ -11,7 +11,7 @@ pipeline {
         stage('Run Log Cleaner Script') {
             steps {
                 sh 'chmod +x logs_clear.sh'
-                sh './logs_clear.sh'
+                sh './healt_checker.sh'
             }
         }
     }
